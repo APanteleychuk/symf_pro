@@ -1,0 +1,36 @@
+# Acme/DemoBundle/Resources/config/admin.yml
+services:
+
+    sonata.admin.serial:
+        class: Acme\DemoBundle\Admin\SerialAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Serials", label: "Serial" }
+        arguments:
+            - ~
+            - Acme\DemoBundle\Entity\Serial
+            - ~
+        calls:
+            - [ setTranslationDomain, [AcmeDemoBundle]]
+
+    sonata.admin.season:
+        class: Acme\DemoBundle\Admin\SeasonAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Serials", label: "Season" }
+        arguments:
+            - ~
+            - Acme\DemoBundle\Entity\Season
+            - ~
+        calls:
+            - [ setTranslationDomain, [AcmeDemoBundle]]
+
+    sonata.admin.part:
+            class: Acme\DemoBundle\Admin\PartAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Serials", label: "Part" }
+            arguments:
+                - ~
+                - Acme\DemoBundle\Entity\Part
+                - ~
+            calls:
+                - [ setTranslationDomain, [AcmeDemoBundle]]
+
