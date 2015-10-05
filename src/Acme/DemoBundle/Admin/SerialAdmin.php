@@ -19,6 +19,7 @@ class SerialAdmin extends Admin
       ->add('description')
       ->add('startDate')
       ->add('finishDate')
+      ->add('img')
     ;
   }
 
@@ -31,6 +32,7 @@ class SerialAdmin extends Admin
       ->add('description')
       ->add('startDate')
       ->add('finishDate')
+      ->add('img')
     ;
   }
 
@@ -40,9 +42,10 @@ class SerialAdmin extends Admin
     $listMapper
       ->addIdentifier('id')
       ->add('serialName')
-      ->add('description')
+      ->add('description', array('required'=>false))
       ->add('startDate')
       ->add('finishDate')
+      ->add('img')
     ;
   }
 }

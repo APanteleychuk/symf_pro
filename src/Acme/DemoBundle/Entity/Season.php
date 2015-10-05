@@ -42,6 +42,7 @@ class Season
     private $finishDate;
 
 
+
     /**
      * Get id
      *

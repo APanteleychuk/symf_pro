@@ -36,15 +36,24 @@ class Part
     private $numberPart;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="img", type="text")
-     */
-    private $img;
-
-
+       * @var string
+       *
+       * @ORM\Column(name="url", type="text")
+       */
+      private $url;
 
     /**
+     *
+     * @ORM\OneToMany(targetEntity="Source", mappedBy="project")
+     * @ORM\JoinColumn(onDelete="CASCADE")
+     */
+
+    private $idseason;
+
+
+
+
+  /**
      * Get id
      *
      * @return integer
@@ -103,27 +112,52 @@ class Part
     }
 
     /**
-     * Set img
+     * Set url
      *
-     * @param string $img
+     * @param string $url
      *
      * @return Part
      */
-    public function setImg($img)
+    public function setUrl($url)
     {
-        $this->img = $img;
+        $this->url = $url;
 
         return $this;
     }
 
     /**
-     * Get img
+     * Get url
      *
      * @return string
      */
-    public function getImg()
+    public function getUrl()
     {
-        return $this->img;
+        return $this->url;
     }
+
+//  !!!!!!!!!!!!!!!!!!!!
+  /**
+   * Set idseason
+   *
+   * @param integer $idseason
+   *
+   * @return Part
+   */
+  public function setIdseason($idseason)
+  {
+    $this->idseason = $idseason;
+
+    return $this;
+  }
+
+  /**
+   * Get idseason
+   *
+   * @return integer
+   */
+  public function getIdseason()
+  {
+    return $this->idseason;
+  }
 }
 

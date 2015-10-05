@@ -127,11 +127,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // acme_demo_homepage
-        if ($pathinfo === '/admin') {
-            return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DefaultController::indexAction',  '_route' => 'acme_demo_homepage',);
-        }
-
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

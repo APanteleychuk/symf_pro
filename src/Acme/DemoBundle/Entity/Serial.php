@@ -49,6 +49,13 @@ class Serial
      */
     private $finishDate;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img", type="text")
+     */
+    private $img;
+
 
     /**
      * Get id
@@ -154,6 +161,23 @@ class Serial
     public function getFinishDate()
     {
         return $this->finishDate;
+    }
+
+    public function setImg($img)
+    {
+        $this->img = $img;
+
+        return $this;
+    }
+
+    /**
+     * Get img
+     *
+     * @return string
+     */
+    public function getImg()
+    {
+        return $this->img;
     }
 }
 

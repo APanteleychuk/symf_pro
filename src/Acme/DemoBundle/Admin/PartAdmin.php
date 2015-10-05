@@ -17,7 +17,8 @@ class PartAdmin extends Admin
 //      ->add('id')
       ->add('namePart')
       ->add('numberPart')
-      ->add('img')
+      ->add('url')
+      ->add('idseason')
     ;
   }
 
@@ -28,7 +29,8 @@ class PartAdmin extends Admin
       ->add('id')
       ->add('namePart')
       ->add('numberPart')
-      ->add('img')
+      ->add('url')
+      ->add('idseason')
     ;
   }
 
@@ -39,7 +41,8 @@ class PartAdmin extends Admin
       ->addIdentifier('id')
       ->add('namePart')
       ->add('numberPart')
-      ->add('img')
+      ->add('url')
+      ->add('idseason')
     ;
   }
 }
